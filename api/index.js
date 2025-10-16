@@ -4,13 +4,11 @@ import express from "express"
 import mongoose from "mongoose"
 import authRoute from "./routes/auth.js"
 import cors from "cors"
+import uploadRoute from "./routes/upload.js"
 
 dotenv.config()
 
 const app = express()
-
-const port = process.env.PORT || 8000
-
 
 app.use(cors());
 
@@ -21,10 +19,9 @@ app.get("/",(req,res)=>{
     res.send("Hello world")
 })
 app.use("/api/auth",authRoute)
+app.use("/api/upload", uploadRoute)
 
-app.listen(port,()=>{
-    console.log("Server is running")
-})
+
 
 const connect = async ()=>{
     try {
@@ -37,5 +34,12 @@ const connect = async ()=>{
     }
 }
 connect()
-export default app
 
+if (process.env.NODE_ENV !== 'production') {
+    const port = process.env.PORT || 8000;
+    app.listen(port, () => {
+        console.log(`Server is running on port ${port}`);
+    });
+}
+
+export default app;
