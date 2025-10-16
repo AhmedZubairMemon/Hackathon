@@ -6,7 +6,7 @@ const PrivateRoute = ({ children }) => {
 
   if(!token){
     showErrorToast("Please login first to access this page")
-    return <Navigate to="/" replace />;
+    return <Navigate to="/login" replace />;
   }
   return children 
 };

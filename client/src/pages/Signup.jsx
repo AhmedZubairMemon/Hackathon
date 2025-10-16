@@ -23,10 +23,7 @@ const Signup = () => {
   const navigate = useNavigate();
 
   // Agar user already logged in, redirect dashboard
-  if (user) {
-    navigate("/verify");
-  }
-
+ 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
