@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import axios from "axios";
-import "./Login.css";
+import "./login.css";
 import { useNavigate, Link } from "react-router-dom";
 import { showErrorToast, showSuccessToast } from "../utils/tostify";
 import {  AuthContext } from "../context/AuthContext";

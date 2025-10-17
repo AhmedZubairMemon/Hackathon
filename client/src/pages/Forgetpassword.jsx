@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { showErrorToast, showSuccessToast } from "../utils/tostify";
-import "./Forgetpassword.css";
+import "./forgetpassword.css";
 import { useNavigate } from "react-router-dom";
 
 const Forget = () => {

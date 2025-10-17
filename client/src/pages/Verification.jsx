@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "./Verification.css";
+import "./verification.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { showErrorToast, showSuccessToast } from "../utils/tostify";
 
