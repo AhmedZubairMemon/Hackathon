@@ -11,7 +11,7 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-  origin: "https://hackathon-fseb.vercel.app/",
+  origin: "https://hackathon-fseb.vercel.app",
   credentials: true
 }));
 
