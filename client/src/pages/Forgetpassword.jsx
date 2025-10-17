@@ -13,7 +13,7 @@ const Forget = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(`${process.env.VITE_API_URL}api/auth/forgetpassword`, { email });
+      const response = await axios.post(`${import.meta.VITE_API_URL}api/auth/forgetpassword`, { email });
       showSuccessToast(response.data.message || "Reset link sent!");
       setEmail("");
       navigate("/resetpassword", { state: { email } });

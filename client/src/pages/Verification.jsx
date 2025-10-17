@@ -35,7 +35,7 @@ const Verification = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post(`${process.env.VITE_API_URL}api/auth/verifyEmail`, {
+      const response = await axios.post(`${import.meta.VITE_API_URL}api/auth/verifyEmail`, {
         otp: verificationCode,
         email
       });
@@ -62,7 +62,7 @@ const Verification = () => {
 
     setResendLoading(true);
     try {
-      const response = await axios.post(`${process.env.VITE_API_URL}api/auth/resendOtp`, {
+      const response = await axios.post(`${import.meta.VITE_API_URL}api/auth/resendOtp`, {
         email
       });
 

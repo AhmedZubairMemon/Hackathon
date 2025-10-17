@@ -42,7 +42,7 @@ const Signup = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post(`${process.env.VITE_API_URL}api/auth/signup`, {
+      const response = await axios.post(`${import.meta.VITE_API_URL}api/auth/signup`, {
         firstName: formData.firstName,
         lastName: formData.lastName,
         userName: formData.userName,
