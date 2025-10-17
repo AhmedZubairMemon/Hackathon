@@ -19,7 +19,7 @@ export const Reset = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:8000/api/auth/resetPassword", {
+      const response = await axios.post(`${process.env.VITE_API_URL}api/auth/resetPassword`, {
         newPassword,
         confirmPassword,
         token,
