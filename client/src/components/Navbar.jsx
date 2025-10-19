@@ -39,9 +39,7 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="nav-logo">
-        {user ? `Welcome, ${user.firstName} ${user.lastName}` : "MyBrand"}
-      </div>
+      <div className="nav-logo">HealthMate</div>
 
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <a href="#home">Home</a>

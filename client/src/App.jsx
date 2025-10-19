@@ -68,7 +68,6 @@ function App() {
                 </PrivateRoute>
               }
             />
-
             {/* ❌ Catch-All Route → Agar user galat path likhe */}
             <Route path="*" element={<NotFound />} />
           </Routes>

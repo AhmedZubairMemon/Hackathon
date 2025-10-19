@@ -1,11 +1,12 @@
 .homepage {
   width: 100%;
-  min-height: 100vh;
+  display: block;
+  overflow: visible; 
   display: flex;
   flex-direction: column;
-}
-
-/* Main Section */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+} /* === Main Section === */
 .home-section {
   text-align: center;
   flex: 1;
@@ -15,25 +16,19 @@
   align-items: center;
   padding: 40px 20px;
   background: linear-gradient(135deg, #f9f9f9, #eef3ff);
-}
-
-/* Headings */
+} /* Headings */
 .home-section h2 {
   font-size: 40px;
   color: #222;
   margin-bottom: 15px;
   font-weight: 700;
-}
-
-/* Paragraph */
+} /* Paragraph */
 .home-section p {
   font-size: 18px;
   color: #555;
   max-width: 600px;
   margin-bottom: 25px;
-}
-
-/* Button */
+} /* Button */
 .home-section button {
   background-color: #007bff;
   color: #fff;
@@ -44,13 +39,46 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 .home-section button:hover {
   background-color: #0056b3;
   transform: scale(1.05);
+} /* === Upload Section === */
+.upload-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
 }
-
-/* === Responsive === */
+.upload-section h3 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+} /* Upload Container */
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.upload-container input[type="file"] {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+}
+.upload-container button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.upload-container button:hover {
+  background-color: #0056b3;
+} /* === Responsive === */
 @media (max-width: 992px) {
   .home-section h2 {
     font-size: 34px;
@@ -58,8 +86,10 @@
   .home-section p {
     font-size: 17px;
   }
+  .upload-section h3 {
+    font-size: 24px;
+  }
 }
-
 @media (max-width: 768px) {
   .home-section h2 {
     font-size: 28px;
@@ -72,8 +102,10 @@
     font-size: 15px;
     padding: 10px 25px;
   }
+  .upload-container input[type="file"] {
+    width: 90%;
+  }
 }
-
 @media (max-width: 480px) {
   .home-section h2 {
     font-size: 24px;
@@ -84,5 +116,8 @@
   .home-section button {
     font-size: 14px;
     padding: 8px 20px;
+  }
+  .upload-section h3 {
+    font-size: 22px;
   }
 }

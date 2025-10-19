@@ -5,6 +5,7 @@ import mongoose from "mongoose"
 import authRoute from "./routes/auth.js"
 import cors from "cors"
 import uploadRoute from "./routes/upload.js"
+import aiRoutes from "./routes/routes.ai.js"
 
 dotenv.config()
 
@@ -23,6 +24,7 @@ app.use(cookieParser())
 // })
 app.use("/api/auth",authRoute)
 app.use("/api/upload", uploadRoute)
+app.use("/api/ai", aiRoutes);
 
 
 
