@@ -20,7 +20,7 @@ const UploadReport = () => {
     setMessage("");
 
     try {
-      const res = await axios.post("http://localhost:8000/api/upload/upload", formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}api/upload/upload`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       setImageUrl(res.data.url);
