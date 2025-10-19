@@ -12,7 +12,7 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-  origin: "https://hackathon-fseb.vercel.app/homepage",
+  origin: "http://localhost:5173/",
   credentials: true
 }));
 
