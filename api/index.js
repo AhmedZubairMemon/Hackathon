@@ -12,7 +12,7 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-  origin: "https://hackathon-x4oe.vercel.app//",
+  origin: "https://hackathon-xvoy.vercel.app",
   credentials: true
 }));
 
