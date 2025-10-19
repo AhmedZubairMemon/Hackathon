@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ViewReport.css";
+import "./viewReport.css";
 
 const ViewReport = ({ report }) => {
   const [language, setLanguage] = useState("english");
